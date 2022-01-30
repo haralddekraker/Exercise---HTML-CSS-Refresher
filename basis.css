@@ -1,0 +1,125 @@
+body {
+    width: 100%; 
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Calibri, sans-serif;
+    background-color: #f3f3f3;    
+}
+
+main, footer {
+    margin: 0px 5px 15px 5px;
+}
+
+.schermpje, footer{    
+    padding: 10px;
+    border: 1px solid grey; 
+    background-color: white;  
+    border-radius: 5px;
+}
+
+.schermpje {
+    margin-bottom: 15px;       
+    display: grid;
+    grid-template:
+    "H2 I" auto
+    "H3 I" auto
+    ". I" auto
+    "P P" auto
+    "K K" 80px / 5fr 1fr;
+}
+
+.schermpje > img {
+    grid-area: I; 
+    margin: 0 auto;     
+    object-fit: scale-down;
+    object-position: right 0;
+}
+.schermpje > h2 {
+    grid-area: H2;
+    margin: 0;
+    font-size:36px;       
+}
+.schermpje > h3 {
+    grid-area: H3;
+    margin: 2px 0 0 0;
+    font-size: 28px;
+    color: grey;
+    font-weight: normal;    
+}
+.schermpje > p {
+    grid-area: P;
+    font-size: 30px;    
+    margin: 10px 0px;
+}
+
+.schermpje > .keuzes {
+    grid-area: K;
+    margin: -10px -10px -10px -10px;    
+    padding: 15px 25px;
+    border-top: 1px solid grey; 
+    display: flex;
+}
+
+.button {
+    width: 50%;   
+    padding: 10px;}
+.button > label{
+    display: block;    
+    height: 100%;    
+    margin: 0 auto;    
+    font-size: 28px;    
+    font-weight: bold; 
+    text-align: center;    
+}
+
+.approve {    
+    border: 2px solid rgb(33, 186, 69);   
+    border-right: none;
+    border-radius: 5px 0px 0px 5px;
+    color: rgb(33, 186, 69);
+}
+.decline {       
+    border: 2px solid rgb(219, 40, 40);
+    border-radius: 0px 5px 5px 0px;
+    color: rgb(219, 40, 40);
+}
+
+@media screen and (min-width: 321px) {
+    main, footer {margin: 1px 5px 15px 6px}
+    footer {margin-top: 0;}
+}
+@media screen and (min-width: 376px) {
+    main, footer {margin: 2px 5px 15px 8px}
+    footer {margin-top: 0;}    
+}
+
+@media screen and (min-width: 426px) {
+    main, footer {margin: 5px 5px 15px 10px}
+    footer {margin-top: 0;} 
+}
+
+@media screen and (min-width: 618px) {
+    main, footer {margin: 30px 5px 15px 25px}
+    footer {margin-top: 0;}
+    main {display: inline}
+    .schermpje {
+        padding-left:25px;        
+        width: 551px;} 
+    .schermpje > p {margin: 20px 0;}
+    .schermpje > .keuzes {margin: 0px -10px -10px -25px;}    
+}  
+
+@media screen and (min-width: 1262px) {
+    body {width:1264px}
+    main {
+        display: grid;
+        grid-template:
+        "F N" auto / 1fr 1fr;              
+    }
+    #Friends {grid-area: F;}
+    #New {grid-area: N;}
+}
+
+    
+    
+  
